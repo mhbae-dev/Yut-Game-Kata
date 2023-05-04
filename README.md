@@ -1,7 +1,6 @@
-Yut Game (Four Sticks Game) Kata
-=================
+# Yut Game (Four Sticks Game) Kata
 
-More Information about Yutnori(Yut Game):
+Further Information about Yutnori(Yut Game):
 https://en.wikipedia.org/wiki/Yut
 https://static1.squarespace.com/static/5cf021045a1cc30001b48fe1/t/6011a8b4fe225e098825d451/1611770037328/yut+nori+inst.pdf
 
@@ -9,37 +8,45 @@ Yutnori is a traditional Korean game that is played with four sticks called Yut 
 
 This kata is an adaptation of the game designed to practice TDD.
 
-Your task
-------------
+## Your task
 
-Your task is to create a program that simulates the game of Yutnori. The program should allow two players to take turns throwing sticks and moving their tokens along a simplified game board. 
+Your task is to create a program that simulates the game of Yutnori. The program should allow two players to take turns throwing sticks and moving their tokens along a simplified game board.
+
 - Each player has the following commands available each turn:
+
 ```
 Player.Throw()
 Player.Move(playerToken)
 ```
 
 ## Requirements
+
 # Game Board and Game Tokens:
+
 For the purposes of this kata, the original game board has been simplified to a one-dimensional array. You should use a string
 array of length 15 to represent 15 spaces on the game board.
 
 The game board should have a method to output a visual representation of the board state.
 For Example:
+
 ```
 board = GameBoard()
 board.displayBoard()
 >[[A1],[],[],[],[],[],[B1,B2],[],[],[],[],[A2],[],[],[]]
 ```
+
 For the purposes of this kata, we will use two tokens per player. The playing tokens can be represented as follows:
+
 ```
 PlayerATokens = [A1,A2]
 PlayerBTokens = [B1,B2]
 ```
 
 # Game Play:
+
 - Players take turns throwing four sticks, which can land with either the flat side up (x) or the rounded side up (o).
 - Each possible combination of stick throws is associated with a different move on the game board as follows:
+
 ```
 DO = "xooo" Move 1 space
 GE = "ooxx" Move 2 spaces
@@ -47,12 +54,14 @@ GEOL = "xxxo" Move 3 spaces
 Yut = "xxxx" Move 4 spaces (get another throw)
 MO = "oooo" Move 5 spaces (get another throw)
 ```
+
 The order or exact match of the sticks does not matter. For example, oxoo counts as DO, xoxo counts as GE, and xxox counts as GEOL.
 
 ![img.png](img.png)
 Image source: https://en.wikipedia.org/wiki/Yut
 
 ## Rules
+
 - All tokens start off the board.
 - The player moves a token of choice (e.g. A1 or A2) on the game board based on the outcome of a throw.
 - A player can have multiple tokens on the board at the same time.
@@ -63,7 +72,9 @@ Image source: https://en.wikipedia.org/wiki/Yut
 - The winner is the first player to move all their tokens to the last space of the game board.
 
 ## Example Game
+
 You may use this example as a basis for your acceptance test
+
 ```
 $[[][][][][][][][][][][][][][][]]
 $PlayerA's turn
@@ -101,6 +112,7 @@ $The winner is PlayerB
 ```
 
 ## Bonus features and refactoring
+
 - Allow the game board to be configured to any size.
 - Allow the number of playing tokens to be configured.
 - Allow for more than two players.

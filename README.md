@@ -87,7 +87,7 @@ $PlayerB's turn
 >PlayerB.Throw()
 $The throw is GEOL xxxo
 >PlayerB.Move(B1)
-$[[][][B1][][][][][][][][][][][][]]  *Note A1 is sent off the board, as PlayerB moved their token on the same space.
+$[[][][B1][][][][][][][][][][][][]]  *Note A1 is sent off the board and must start over, as PlayerB moved their token on the same space.
 
 ......... game continuing
 
@@ -104,6 +104,7 @@ $The throw is GEOL xxxo
 $[[][][][A1,A2][][][][][][][][][B2][][]]  *Note B2 stays in the same place, as GEOL is not the correct throw to move to the last space
 
 ......... game continuing
+
 $[[][][][][][][][A2][][][A1][][B2][][]]
 $PlayerB's turn
 >PlayerB.Throw()

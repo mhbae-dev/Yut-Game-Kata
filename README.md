@@ -12,13 +12,6 @@ This kata is an adaptation of the game designed to practice TDD.
 
 Your task is to create a program that simulates the game of Yutnori. The program should allow two players to take turns throwing sticks and moving their tokens along a simplified game board.
 
-- Each player has the following commands available each turn:
-
-```
-Player.Throw()
-Player.Move(playerToken)
-```
-
 ## Requirements
 
 # Game Board and Game Tokens:
@@ -45,6 +38,13 @@ PlayerBTokens = [B1,B2]
 # Game Play:
 
 - Players take turns throwing four sticks, which can land with either the flat side up (x) or the rounded side up (o).
+- Each player has the following commands available each turn:
+
+```
+Player.Throw()
+Player.Move(playerToken)
+```
+
 - Each possible combination of stick throws is associated with a different move on the game board as follows:
 
 ```

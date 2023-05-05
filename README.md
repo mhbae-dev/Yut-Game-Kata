@@ -115,8 +115,9 @@ $The winner is PlayerB
 
 ## Bonus features and refactoring
 
-- Allow the game board to be configured to any size.
-- Allow the number of playing tokens to be configured.
+- Allow the game board to be customized to any size.
+- Allow the number of player tokens to be adjusted.
 - Allow for more than two players.
-- Tokens are automatically stacked when they land on the same square and can be moved together.
-- If the player throws more than the number of spaces remaining to the last space on the board, the token wraps around the board and continues moving from the start.
+- Tokens should be automatically stacked when they land on the same square and move together.
+- If a player throws a score greater than the number of remaining spaces to the last space on the board, the token should wrap around the board and continue moving from the start.
+- Introduce obstacles on the game board such that when a player lands on them, they either miss a turn or move their token back a few spaces.

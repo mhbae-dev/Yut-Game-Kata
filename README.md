@@ -28,7 +28,8 @@ board.displayBoard()
 >[[A1],[],[],[],[],[],[B1,B2],[],[],[],[],[A2],[],[],[]]
 ```
 
-For the purposes of this kata, we will use two tokens per player. The playing tokens can be represented as follows:
+For the purposes of this kata, we will use two tokens per player. 
+The playing tokens can be represented as follows:
 
 ```
 PlayerATokens = [A1,A2]

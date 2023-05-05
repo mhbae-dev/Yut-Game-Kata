@@ -10,7 +10,7 @@ This kata is an adaptation of the game designed to practice TDD.
 
 ## Your task
 
-Your task is to create a program that simulates the game of Yutnori. The program should allow two players to take turns throwing sticks and moving their tokens along a simplified game board.
+Your task is to develop a program that simulates a game of Yutnori. The program should enable two players to take turns throwing sticks and moving their tokens along a simplified game board, with the objective of moving all their tokens across the board before their opponent does.
 
 ## Requirements
 

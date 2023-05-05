@@ -1,8 +1,8 @@
 # Yut Game (Four Sticks Game) Kata
 
 Further Information about Yutnori(Yut Game):
-https://en.wikipedia.org/wiki/Yut
-https://static1.squarespace.com/static/5cf021045a1cc30001b48fe1/t/6011a8b4fe225e098825d451/1611770037328/yut+nori+inst.pdf
+- https://en.wikipedia.org/wiki/Yut
+- https://static1.squarespace.com/static/5cf021045a1cc30001b48fe1/t/6011a8b4fe225e098825d451/1611770037328/yut+nori+inst.pdf
 
 Yutnori is a traditional Korean game that is played with four sticks called Yut (acting as dice), a game board, and tokens. The players take turns throwing the Yut sticks and moving their tokens along the game board based on the outcome of the throw. The game is won when a player has taken all their tokens from the start to the end of the board.
 
@@ -48,16 +48,17 @@ PlayerBTokens = [B1,B2]
 - Each possible combination of stick throws is associated with a different move on the game board as follows:
 
 ```
-DO = "xooo" Move 1 space
+DO = "ooox" Move 1 space
 GE = "ooxx" Move 2 spaces
-GEOL = "xxxo" Move 3 spaces
+GEOL = "oxxx" Move 3 spaces
 Yut = "xxxx" Move 4 spaces (get another throw)
 MO = "oooo" Move 5 spaces (get another throw)
 ```
 
 The order or exact match of the sticks does not matter. For example, oxoo counts as DO, xoxo counts as GE, and xxox counts as GEOL.
 
-![img.png](img.png)
+<img src="img.png" alt="Yut game board" width="600"/>
+
 Image source: https://en.wikipedia.org/wiki/Yut
 
 ## Rules
@@ -86,7 +87,7 @@ $PlayerB's turn
 >PlayerB.Throw()
 $The throw is GEOL xxxo
 >PlayerB.Move(B1)
-$[[][][B1][][][][][][][][][][][][]]  *Note A1 is sent off the board as PlayerB moved their token on the same space.
+$[[][][B1][][][][][][][][][][][][]]  *Note A1 is sent off the board, as PlayerB moved their token on the same space.
 
 ......... game continuing
 
@@ -95,12 +96,12 @@ $PlayerB's turn
 >PlayerB.Throw()
 $The throw is YUT xxxx
 >PlayerB.Move(B1)
-$[[][][][A1,A2][][][][][][][][][B2][][]]  *Note B1 is taken off the board as YUT was the correct throw to move to the last space
+$[[][][][A1,A2][][][][][][][][][B2][][]]  *Note B1 is taken off the board, as YUT was the correct throw to move to the last space
 $PlayerB's turn                           *Note PlayerB gets another throw as they threw a YUT
 >PlayerB.Throw()
 $The throw is GEOL xxxo
 >PlayerB.Move(B2)
-$[[][][][A1,A2][][][][][][][][][B2][][]]  *Note B2 stays in the same place as GEOL is not the correct throw to move to the last space
+$[[][][][A1,A2][][][][][][][][][B2][][]]  *Note B2 stays in the same place, as GEOL is not the correct throw to move to the last space
 
 ......... game continuing
 $[[][][][][][][][A2][][][A1][][B2][][]]

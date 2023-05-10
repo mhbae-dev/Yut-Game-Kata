@@ -37,15 +37,13 @@ PlayerBTokens = [B1,B2]
 ```
 
 # Game Play:
-
-- Players take turns throwing four sticks, which can land with either the flat side up (x) or the rounded side up (o).
 - Each player has the following commands available each turn:
 
 ```
 Player.Throw()
 Player.Move(playerToken)
 ```
-
+- Players take turns throwing four sticks, which can land with either the flat side up (x) or the rounded side up (o).
 - Each possible combination of stick throws is associated with a different move on the game board as follows:
 
 ```

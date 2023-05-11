@@ -117,6 +117,5 @@ $The winner is PlayerB
 - Allow the game board to be customized to any size.
 - Allow the number of player tokens to be adjusted.
 - Allow for more than two players.
-- Tokens should be automatically stacked when they land on the same square and move together.
 - If a player throws a score greater than the number of remaining spaces to the last space on the board, the token should wrap around the board and continue moving from the start.
 - Introduce obstacles on the game board such that when a player lands on them, they either miss a turn or move their token back a few spaces.
